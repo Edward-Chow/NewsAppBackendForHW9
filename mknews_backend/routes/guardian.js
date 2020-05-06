@@ -89,6 +89,7 @@ module.exports = () => {
         articleDetails.url = articleContent.webUrl;
         articleDetails.date = articleContent.webPublicationDate;
         try {
+          articleDetails.description = '';
           for (const b of articleContent.blocks.body) {
             articleDetails.description += b.bodyHtml;
           }
